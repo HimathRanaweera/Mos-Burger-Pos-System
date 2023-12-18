@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Title</title>
-        <link rel="stylesheet" href="Users.css">
+        <link rel="stylesheet" href="CSS/Users.css">
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -21,8 +21,123 @@
 
     <body>
         <header>
+            <P class="header" style="height: 50px; font-size: 50px; margin-top: 10px; font-style: oblique; color: white; text-align: center; text-shadow: 2px 2px 2px darkturquoise;">Mos Burger</P>
+        </header>
+        <div class ="row">
+            <div class="col-md-6 mx-auto p-0">
+                <div class="card">
+        <div class="login-box">
+            <div class="login-snip">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                <div class="login-space">
+                    <div class="login">
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" type="text" class="input"  placeholder="Enter your username">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password">
+                        </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot">
+                            <label for="tab-2">Create Account</label><br>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="sign-up-form">
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" type="text" class="input" placeholder="Create your Username">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" type="password" class="input" data-type="password" placeholder="Create your password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Repeat Password</label>
+                            <input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password" >
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Email Address</label>
+                            <input id="pass" type="text" class="input" placeholder="Enter your email address">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot">
+                            <label for="tab-1">Already Member?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        </div>
+        </div>
+        </div>
+        
+
+
+        <!-- <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card bg-dark-subtle text-dark" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+          
+                      <div class="mb-md-5 mt-md-4 pb-5">
+          
+                        <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                        <p class="text-dark-50 mb-5">Please enter your Email and Password!</p>
+          
+                        <div class="form-outline form-white mb-4">
+                          <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                          <label class="form-label" for="typeEmailX">Email</label>
+                        </div>
+          
+                        <div class="form-outline form-white mb-4" >
+                          <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                          <label class="form-label" for="typePasswordX">Password</label>
+                        </div>
+          
+                        <p class="small mb-5 pb-lg-2"><a class="text-dark-50" href="#!">Forgot password?</a></p>
+          
+                        <button class="btn btn-outline-info btn-lg px-5" type="submit">Login</button>
+          
+                        <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                          <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                          <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                          <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                        </div>
+          
+                      </div>
+          
+                      <div>
+                        <p class="mb-0">Don't have an account? <a href="#!" class="text-dark-50 fw-bold">Sign Up</a>
+                        </p>
+                      </div>
+          
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+         -->
+        
+        <header>
+            <!-- <img src="logo/ai-generated-8302143_1920.jpg" alt="">
             <div class="container">
-                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="d-flex justify-content-center align-items-center flex-wrap"> -->
                     <!-- <div class="content">
                         <div class="h4 text-white">A Beautiful Design System</div>
                         <div class="fs-5 text-white text-grey">Completed with examples</div>
@@ -37,20 +152,20 @@
                         </div>
         
                     </div> -->
-                    <div class="form-card">
+                    
+                    <!-- <div class="form-card">
                         <div class="card">
                             <div class="card-head bg-white">
                                 <p class="m-0 text-center fs-08">Sign in with </p>
                                 <div class="d-flex align-items-center justify-content-center my-2">
-                                    <!-- <div class="btn btn-default"> -->
-                                        <!-- <img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
-                                            alt="">
-                                        <span>GitHUb</span> -->
-                                    <!-- </div> -->
+                                    <div class="btn btn-default">
+                                        <img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new"/>
+                                        <span>Facebook</span>
+                                    </div>
                                     <div class="btn btn-default mx-3">
                                         <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
                                             alt="">
-                                        <span aria-checked="true">Google</span>
+                                        <span>Google</span>
                                     </div>
                                 </div>
                             </div>
@@ -74,9 +189,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
+
+
            <!-- place navbar here -->
+           
         </header>
         <main></main>
         <footer>
@@ -98,5 +216,6 @@
             crossorigin="anonymous"
         ></script>
         <script src="user.js"></script>
+        
     </body>
 </html>
