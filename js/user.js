@@ -1,37 +1,46 @@
-// document.addEventListener("DOMContentLoaded", function (event) {
-//     // Your code to run since DOM is loaded and ready
-//     VanillaTilt.init(document.querySelectorAll(".card"), {
-//         max: 25,
-//         speed: 400,
-//         glare: false,
-//         "max-glare": 0.8
-//     });
-//     VanillaTilt.init(document.querySelectorAll(".card"));
-// });
+$(function () {
+  "use strict";
 
+  $(".preloader").fadeOut();
 
+  // =================================
+  // Tooltip
+  // =================================
+  var tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
 
+  // =================================
+  // Popover
+  // =================================
+  var popoverTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="popover"]')
+  );
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl);
+  });
 
+  // increment & decrement
+  $(".minus,.add").on("click", function () {
+    var $qty = $(this).closest("div").find(".qty"),
+      currentVal = parseInt($qty.val()),
+      isAdd = $(this).hasClass("add");
+    !isNaN(currentVal) &&
+      $qty.val(
+        isAdd ? ++currentVal : currentVal > 0 ? --currentVal : currentVal
+      );
+  });
 
-
-
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+   // fixed header
+   $(window).scroll(function () {
+    if ($(window).scrollTop() >= 60) {
+      $(".topbar").addClass("shadow-sm");
+    } else {
+      $(".topbar").removeClass("shadow-sm");
+    }
+  });
+  
+});
